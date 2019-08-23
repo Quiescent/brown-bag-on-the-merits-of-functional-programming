@@ -127,6 +127,8 @@ These things get rattled off all the time.
 "It is a logical impossibility to make a language more powerful by
 omitting features, no matter how bad they may be."
 
+[[https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf]]
+
 * Why Is It A Good Thing To Remove Some Features?
 
 * Object Oriented Programmers Are Already Doing This!
