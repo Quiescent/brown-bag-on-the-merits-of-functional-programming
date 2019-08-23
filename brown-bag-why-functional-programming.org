@@ -1,0 +1,70 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:t todo:t |:t
+#+TITLE: Brown Bag: Why Functional Programming (And maybe some points in Scala's favour)
+#+DATE: <2019-08-23 Fri>
+#+AUTHOR: Edward John Steere
+#+EMAIL: steere@JNB002512673
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+OPTIONS: reveal_center:t reveal_control:t reveal_defaulttiming:nil
+#+OPTIONS: reveal_fragmentinurl:nil reveal_generate_ids:t
+#+OPTIONS: reveal_global_footer:nil reveal_global_header:nil
+#+OPTIONS: reveal_hashonebasedindex:nil reveal_height:nil
+#+OPTIONS: reveal_history:nil reveal_inter_presentation_links:nil
+#+OPTIONS: reveal_keyboard:t reveal_mousewheel:nil reveal_overview:t
+#+OPTIONS: reveal_pdfseparatefragments:t reveal_progress:t
+#+OPTIONS: reveal_rolling_links:nil reveal_single_file:nil
+#+OPTIONS: reveal_slide_number:"c" reveal_toc_footer:nil
+#+OPTIONS: reveal_width:nil
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_MARGIN: -1
+#+REVEAL_MIN_SCALE: -1
+#+REVEAL_MAX_SCALE: -1
+#+REVEAL_EXTRA_OPTIONS:
+#+REVEAL_TRANS: convex
+#+REVEAL_SPEED: default
+#+REVEAL_THEME: moon
+#+REVEAL_EXTRA_CSS:
+#+REVEAL_EXTRA_JS:
+#+REVEAL_EXTRA_ATTR:
+#+REVEAL_HLEVEL:
+#+REVEAL_TITLE_SLIDE:
+#+REVEAL_ACADEMIC_TITLE:
+#+REVEAL_MISCINFO:
+#+REVEAL_TITLE_SLIDE_BACKGROUND:
+#+REVEAL_TITLE_SLIDE_STATE:
+#+REVEAL_TITLE_SLIDE_TIMING:
+#+REVEAL_TITLE_SLIDE_BACKGROUND_SIZE:
+#+REVEAL_TITLE_SLIDE_BACKGROUND_POSITION:
+#+REVEAL_TITLE_SLIDE_BACKGROUND_REPEAT:
+#+REVEAL_TITLE_SLIDE_BACKGROUND_TRANSITION:
+#+REVEAL_TOC_SLIDE_STATE:
+#+REVEAL_TOC_SLIDE_CLASS:
+#+REVEAL_TOC_SLIDE_TITLE: Table of Contents
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND:
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND_SIZE:
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND_POSITION:
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND_REPEAT:
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND_TRANSITION:
+#+REVEAL_MATHJAX_URL: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+REVEAL_PREAMBLE:
+#+REVEAL_HEAD_PREAMBLE:
+#+REVEAL_POSTAMBLE:
+#+REVEAL_MULTIPLEX_ID:
+#+REVEAL_MULTIPLEX_SECRET:
+#+REVEAL_MULTIPLEX_URL:
+#+REVEAL_MULTIPLEX_SOCKETIO_URL:
+#+REVEAL_SLIDE_HEADER:
+#+REVEAL_SLIDE_FOOTER:
+#+REVEAL_PLUGINS:
+#+REVEAL_EXTERNAL_PLUGINS:
+#+REVEAL_DEFAULT_FRAG_STYLE:
+#+REVEAL_HIGHLIGHT_CSS: %r/lib/css/zenburn.css
+#+CREATOR: Emacs 27.0.50 (Org mode 9.1.9)
+
+* Test
+

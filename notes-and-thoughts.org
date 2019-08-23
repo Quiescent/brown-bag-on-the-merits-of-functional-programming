@@ -1,0 +1,44 @@
+* Notes and Thoughts
+ - Pure functions are easier to reason about.
+ - Pure functions are easier to test.
+ - reliable and easier concurrency;
+   - Three-tier locking-transaction architecture doesn't scale.
+ - Strong types make for better compile time checks.
+   - More powerful re factoring tools.
+     - How does one *safely* re factor code with the return type unit?
+   - Reliable and explicit error handling without the boiler plate.
+   - Cutting edge research advances the meta all of the time.
+     - Refinement types;
+     - Dependant types;
+     - Monads;
+     - Applicative;
+ - Kicker: these get rattled off all of the time.  Why should you
+   care?
+ - Fair criticism: this is a list of ways in which the programmer is
+   restricted when writing code.
+ - "It is a logical impossibility to make a language more powerful by
+   omitting features, no matter how bad they may be."
+ - So why do we exclude features of languages and think that this is a
+   good thing?
+ - Lets look at a lesson which we learned from the OOP world:
+   composition over inheritance leads to more easily compo-sable
+   programs.
+ - Why?  Because we untangle pieces of code which can be re-used more
+   readily.
+ - The argument becomes more concrete at this point: we want to create
+   programs which are easier to build upon and in which we make
+   get more millage for the code we write.
+ - Purely functional code composes very well:
+   - Functions compose by lining up arguments.
+   - Abstractions can be (and have been) built upon different ways of composing:
+     - Monad;
+     - Applicative;
+     - Arrow;
+     - Higher kinded types;
+   - Example Future code with only the happy path being worried about.
+ - Points which I want to communicate very strongly:
+   - It is possible to write good code in any language or paradigm.
+   - Functional programming offers more static reasoning power than
+     imperative programming.
+   - You can implement functional programming using objects.  Scala
+     does this.
