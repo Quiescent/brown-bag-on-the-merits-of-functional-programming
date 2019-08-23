@@ -116,7 +116,7 @@
 
 ** Applicative
 
-/"Very recent innovation which abstracts over gluing programs together"/
+Very recent innovation which abstracts over gluing programs together
 
 * Laundry List of Things
 
