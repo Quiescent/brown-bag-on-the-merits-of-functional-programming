@@ -1,9 +1,9 @@
 #+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
 #+OPTIONS: author:t broken-links:nil c:nil creator:nil
-#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t
 #+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
-#+OPTIONS: timestamp:t title:t toc:t todo:t |:t
-#+TITLE: Brown Bag: Why Functional Programming (And maybe some points in Scala's favour)
+#+OPTIONS: timestamp:t title:t toc:nil num:nil todo:t |:t
+#+TITLE: Why Functional Programming
 #+DATE: <2019-08-23 Fri>
 #+AUTHOR: Edward John Steere
 #+EMAIL: steere@JNB002512673
@@ -32,19 +32,7 @@
 #+REVEAL_EXTRA_JS:
 #+REVEAL_EXTRA_ATTR:
 #+REVEAL_HLEVEL:
-#+REVEAL_TITLE_SLIDE:
-#+REVEAL_ACADEMIC_TITLE:
 #+REVEAL_MISCINFO:
-#+REVEAL_TITLE_SLIDE_BACKGROUND:
-#+REVEAL_TITLE_SLIDE_STATE:
-#+REVEAL_TITLE_SLIDE_TIMING:
-#+REVEAL_TITLE_SLIDE_BACKGROUND_SIZE:
-#+REVEAL_TITLE_SLIDE_BACKGROUND_POSITION:
-#+REVEAL_TITLE_SLIDE_BACKGROUND_REPEAT:
-#+REVEAL_TITLE_SLIDE_BACKGROUND_TRANSITION:
-#+REVEAL_TOC_SLIDE_STATE:
-#+REVEAL_TOC_SLIDE_CLASS:
-#+REVEAL_TOC_SLIDE_TITLE: Table of Contents
 #+REVEAL_DEFAULT_SLIDE_BACKGROUND:
 #+REVEAL_DEFAULT_SLIDE_BACKGROUND_SIZE:
 #+REVEAL_DEFAULT_SLIDE_BACKGROUND_POSITION:
@@ -66,5 +54,106 @@
 #+REVEAL_HIGHLIGHT_CSS: %r/lib/css/zenburn.css
 #+CREATOR: Emacs 27.0.50 (Org mode 9.1.9)
 
-* Test
+* (And maybe some points in Scala's favour)
 
+* Immutable!
+
+* No Variables!
+
+* No Side Effects!
+
+* Reasoning about Code!
+
+* Testing Code!
+
+* Reliable and Safe Concurrency!
+
+/Three-tier locking-transaction based architectures "scale"/
+
+* Scala: Strong Types Help with Better Compile Time Checks
+
+** More Powerful Refactoring Tools
+
+/How does one *safely* refactor functions which return units?/
+
+** Reliable and Explicit Error Handling Without the Boiler Plate
+
+#+BEGIN_SRC scala
+  for {
+    catCount     <- configuration.getOption("numberOfCatsToDeploy")
+    fantasticnes <- awesomeServer.queryGeneralLevelOfAwesome
+    system       <- setupTheCats(catCount, fantasticness)
+  } yield system
+#+END_SRC
+
+** Cutting Edge Research in Type Theory
+
+*** Refinement Types
+
+#+BEGIN_SRC scala
+  // This refines Int with the Positive predicate and checks via an
+  // implicit macro that the assigned value satisfies it:
+  scala> val i1: Int Refined Positive = 5
+  i1: Int Refined Positive = 5
+
+  // If the value does not satisfy the predicate, we get a meaningful
+  // compile error:
+  scala> val i2: Int Refined Positive = -5
+  <console>:22: error: Predicate failed: (-5 > 0).
+         val i2: Int Refined Positive = -5
+#+END_SRC
+
+[[https://github.com/fthomas/refined]]
+
+** Dependant Types
+
+ - Make bad states impossible.
+ - Encode domain knowledge in the compiler.
+
+** Monads
+
+/"How do they work?"/
+
+** Applicative
+
+/"Very recent innovation which abstracts over gluing programs together"/
+
+* Laundry List of Things
+
+These things get rattled off all the time.
+
+* The Truth:
+
+"It is a logical impossibility to make a language more powerful by
+omitting features, no matter how bad they may be."
+
+* Why Is It A Good Thing To Remove Some Features?
+
+* Object Oriented Programmers Are Already Doing This!
+
+ - Composition > Inheritance
+
+* False Economy of Re-Use
+
+/You don't want a tangled ball of mud.../
+
+* We Want More Mileage for the Code Which We Write
+
+ - build bigger programs from smaller abstractions;
+ - composition, composition, composition...
+
+* In FP We Compose, then We Abstract Over More Ways of Composing
+
+ - Compose ~o~
+ - Monad
+ - Applicative
+ - Arrow
+ - Higher Kinded Types
+
+* Remarks
+
+** It's possible to write good code in any language or paradigm
+
+** Functional programming offers more static reasoning power than imperative programming
+
+** You can implement purely functional programming using objects (Scala does this!)

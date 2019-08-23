@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Brown Bag: Why Functional Programming (And maybe some points in Scala's favour)</title>
+<title>Why Functional Programming</title>
 <meta name="author" content="(Edward John Steere)"/>
 <style type="text/css">
 .underline { text-decoration: underline; }
@@ -26,22 +26,236 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
-</section>
-<section id="table-of-contents">
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#/slide-org57cb4ad">1. Test</a></li>
-</ul>
-</div>
-</div>
+<section id="sec-title-slide"><h1 class="title">Why Functional Programming</h1><h2 class="author">Edward John Steere</h2><h2 class="date">2019-08-23 Fri 00:00</h2><p class="date">Created: 2019-08-23 Fri 12:01</p>
 </section>
 
-<section id="slide-org57cb4ad" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<section id="slide-org446991a" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
 <div class="slide-header"></div>
-<h2 id="org57cb4ad"><span class="section-number-2">1</span> Test</h2>
+<h2 id="org446991a">(And maybe some points in Scala's favour)</h2>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org7c0d466" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org7c0d466">Immutable!</h2>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgba170c7" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="orgba170c7">No Variables!</h2>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org786616a" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org786616a">No Side Effects!</h2>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org2bc72ad" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org2bc72ad">Reasoning about Code!</h2>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org70621ee" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org70621ee">Testing Code!</h2>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org9378ee5" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org9378ee5">Reliable and Safe Concurrency!</h2>
+<p>
+<i>Three-tier locking-transaction based architectures "scale"</i>
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org55e79d4" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org55e79d4">Scala: Strong Types Help with Better Compile Time Checks</h2>
+<div class="outline-text-2" id="text-org55e79d4">
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org9ffcd93" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org9ffcd93">More Powerful Refactoring Tools</h3>
+<p>
+<i>How does one <b>safely</b> refactor functions which return units?</i>
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org4f5127c" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org4f5127c">Reliable and Explicit Error Handling Without the Boiler Plate</h3>
+<div class="org-src-container">
+
+<pre  class="src src-scala"><code trim><span style="color: #51afef;">for</span> <span style="color: #b0c4de;">{</span>
+  catCount     <span style="color: #51afef;">&lt;-</span> configuration.getOption<span style="color: #6495ed;">(</span><span style="color: #98be65;">"numberOfCatsToDeploy"</span><span style="color: #6495ed;">)</span>
+  fantasticnes <span style="color: #51afef;">&lt;-</span> awesomeServer.queryGeneralLevelOfAwesome
+  system       <span style="color: #51afef;">&lt;-</span> setupTheCats<span style="color: #6495ed;">(</span>catCount, fantasticness<span style="color: #6495ed;">)</span>
+<span style="color: #b0c4de;">}</span> <span style="color: #51afef;">yield</span> system
+</code></pre>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org26b6617" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org26b6617">Cutting Edge Research in Type Theory</h3>
+<div class="outline-text-3" id="text-org26b6617">
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgcdb839e" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h4 id="orgcdb839e">Refinement Types</h4>
+<div class="org-src-container">
+
+<pre  class="src src-scala"><code trim><span style="color: #5B6268;">// </span><span style="color: #5B6268;">This refines Int with the Positive predicate and checks via an</span>
+<span style="color: #5B6268;">// </span><span style="color: #5B6268;">implicit macro that the assigned value satisfies it:</span>
+scala&gt; <span style="color: #51afef;">val</span> <span style="color: #dcaeea;">i1</span><span style="color: #51afef;">:</span> <span style="color: #ECBE7B;">Int</span> <span style="color: #a9a1e1;">Refined</span> <span style="color: #a9a1e1;">Positive</span> <span style="color: #51afef;">=</span> <span style="color: #a9a1e1;">5</span>
+i1<span style="color: #51afef;">:</span> <span style="color: #ECBE7B;">Int</span> <span style="color: #a9a1e1;">Refined</span> <span style="color: #a9a1e1;">Positive</span> <span style="color: #51afef;">=</span> <span style="color: #a9a1e1;">5</span>
+
+<span style="color: #5B6268;">// </span><span style="color: #5B6268;">If the value does not satisfy the predicate, we get a meaningful</span>
+<span style="color: #5B6268;">// </span><span style="color: #5B6268;">compile error:</span>
+scala&gt; <span style="color: #51afef;">val</span> <span style="color: #dcaeea;">i2</span><span style="color: #51afef;">:</span> <span style="color: #ECBE7B;">Int</span> <span style="color: #a9a1e1;">Refined</span> <span style="color: #a9a1e1;">Positive</span> <span style="color: #51afef;">=</span> <span style="color: #a9a1e1;">-5</span>
+&lt;console<span style="color: #51afef;">&gt;:</span><span style="color: #a9a1e1;">22</span><span style="color: #51afef;">:</span> <span style="color: #ECBE7B;">error</span><span style="color: #51afef;">:</span> <span style="color: #a9a1e1;">Predicate</span> failed<span style="color: #51afef;">:</span> <span style="color: #b0c4de;">(</span><span style="color: #a9a1e1;">-5</span> &gt; <span style="color: #a9a1e1;">0</span><span style="color: #b0c4de;">)</span>.
+       <span style="color: #51afef;">val</span> <span style="color: #dcaeea;">i2</span><span style="color: #51afef;">:</span> <span style="color: #ECBE7B;">Int</span> <span style="color: #a9a1e1;">Refined</span> <span style="color: #a9a1e1;">Positive</span> <span style="color: #51afef;">=</span> <span style="color: #a9a1e1;">-5</span>
+</code></pre>
+</div>
+
+<p>
+<a href="https://github.com/fthomas/refined">https://github.com/fthomas/refined</a>
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org07d487d" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org07d487d">Dependant Types</h3>
+<ul>
+<li>Make bad states impossible.</li>
+<li>Encode domain knowledge in the compiler.</li>
+
+</ul>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org78dd354" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org78dd354">Monads</h3>
+<p>
+<i>"How do they work?"</i>
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org67ac71a" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org67ac71a">Applicative</h3>
+<p>
+<i>"Very recent innovation which abstracts over gluing programs together"</i>
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org84b7813" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org84b7813">Laundry List of Things</h2>
+<p>
+These things get rattled off all the time.
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgd293b40" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="orgd293b40">The Truth:</h2>
+<p>
+"It is a logical impossibility to make a language more powerful by
+omitting features, no matter how bad they may be."
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org8603d8a" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org8603d8a">Why Is It A Good Thing To Remove Some Features?</h2>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org3147100" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org3147100">Object Oriented Programmers Are Already Doing This!</h2>
+<ul>
+<li>Composition &gt; Inheritance</li>
+
+</ul>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgfbe0bb8" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="orgfbe0bb8">False Economy of Re-Use</h2>
+<p>
+<i>You don't want a tangled ball of mud&#x2026;</i>
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org440c7d1" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org440c7d1">We Want More Mileage for the Code Which We Write</h2>
+<ul>
+<li>build bigger programs from smaller abstractions;</li>
+<li>composition, composition, composition&#x2026;</li>
+
+</ul>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgdd74630" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="orgdd74630">In FP We Compose, then We Abstract Over More Ways of Composing</h2>
+<ul>
+<li>Compose <code>o</code></li>
+<li>Monad</li>
+<li>Applicative</li>
+<li>Arrow</li>
+<li>Higher Kinded Types</li>
+
+</ul>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orga1327f8" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="orga1327f8">Remarks</h2>
+<div class="outline-text-2" id="text-orga1327f8">
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org76245d3" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org76245d3">It's possible to write good code in any language or paradigm</h3>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org3e57aa0" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org3e57aa0">Functional programming offers more static reasoning power than imperative programming</h3>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org1b5b057" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org1b5b057">You can implement purely functional programming using objects (Scala does this!)</h3>
 <div class="slide-footer"></div>
 </section>
 </section>
